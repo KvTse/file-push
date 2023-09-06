@@ -2,7 +2,7 @@ package ftpClient
 
 import (
 	"bytes"
-	"file-push/common"
+	"file-push/models"
 	"fmt"
 	"github.com/jlaffaye/ftp"
 	"io"
@@ -14,7 +14,7 @@ import (
 )
 
 // NewFtpConn 连接ftp并登录
-func NewFtpConn(ftpMessage common.FtpMessage) (*ftp.ServerConn, error) {
+func NewFtpConn(ftpMessage models.FtpMessage) (*ftp.ServerConn, error) {
 	c, err := ftp.Dial(fmt.Sprintf("%s:%s", ftpMessage.FtpHost, ftpMessage.FtpPort),
 		ftp.DialWithTimeout(5*time.Second)) // , ftp.DialWithDebugOutput(os.Stdout)
 	if err != nil {
@@ -59,6 +59,10 @@ func ChangeDirAndMakeDirIfNotExist(conn *ftp.ServerConn, workDir string, baseDir
 }
 func UploadFile(conn *ftp.ServerConn, locateFilePath string) (uploadResult string, err error) {
 	file, err := os.Open(locateFilePath)
+	if err != nil {
+		log.Printf("open file error %v", err)
+		return "文件不存在", err
+	}
 	fileName := filepath.Base(file.Name())
 	uploadingFile := fileName + ".temp"
 
@@ -75,7 +79,8 @@ func UploadFile(conn *ftp.ServerConn, locateFilePath string) (uploadResult strin
 	if uploadingFileExist {
 		remoteSize, err = conn.FileSize(uploadingFile)
 	}
-
+	stat, _ := file.Stat()
+	fileSize := stat.Size()
 	onceReadLength := 10 * 1024 * 1024
 	data := make([]byte, onceReadLength)
 	n := -1
@@ -103,12 +108,13 @@ func UploadFile(conn *ftp.ServerConn, locateFilePath string) (uploadResult strin
 			if err == nil {
 				break
 			} else {
+				time.Sleep(500 * time.Millisecond)
 				log.Print(err)
 			}
 		}
 		//time.Sleep(10 * time.Second)
 		remoteSize += int64(n)
-		log.Println("read size ", n)
+		log.Printf("file [%s] uploaded %d  total size %d process %s", uploadingFile, remoteSize, fileSize, fmt.Sprintf("%.2f", float64(remoteSize)/float64(fileSize)))
 		if err != nil {
 			log.Fatalf("cannot Store file, fileName %s , err %v", file.Name(), err)
 		}

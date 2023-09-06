@@ -76,9 +76,6 @@ func ConsumeMessageFromKafka(gLimit *limit.GLimit) {
 		gLimit.Run(goFunc)
 	}
 }
-func doConsume(ctx context.Context, message kafka.Message) {
-
-}
 func ListenerSignal() {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, syscall.SIGINT, syscall.SIGTERM)

@@ -1,4 +1,4 @@
-package common
+package models
 
 // FtpMessage 消息
 type FtpMessage struct {
