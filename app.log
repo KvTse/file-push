@@ -1,0 +1,13 @@
+2023-09-07T00:11:45.210+0800	INFO	file-push/main.go:30	start server ...
+2023-09-07T00:12:30.379+0800	INFO	file-push/main.go:55	1694016750379-0
+2023-09-07T00:27:50.233+0800	ERROR	redismq/consumer.go:104	receive msg failed, err: NOGROUP No such key 'myTopic' or consumer group 'consumerGroup' in XREADGROUP with GROUP option
+2023-09-07T00:27:50.231+0800	INFO	file-push/main.go:74	start server ...
+2023-09-07T00:27:50.257+0800	ERROR	redismq/consumer.go:104	receive msg failed, err: NOGROUP No such key 'myTopic' or consumer group 'consumerGroup' in XREADGROUP with GROUP option
+2023-09-07T00:27:50.258+0800	ERROR	redismq/consumer.go:104	receive msg failed, err: NOGROUP No such key 'myTopic' or consumer group 'consumerGroup' in XREADGROUP with GROUP option
+2023-09-07T00:27:50.258+0800	ERROR	log/log.go:185	ListenAndServe: %!(EXTRA *net.OpError=listen tcp :9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.)
+2023-09-07T00:28:20.856+0800	INFO	file-push/main.go:74	start server ...
+2023-09-07T00:28:20.859+0800	ERROR	redismq/consumer.go:104	receive msg failed, err: NOGROUP No such key 'myTopic' or consumer group 'consumerGroup' in XREADGROUP with GROUP option
+2023-09-07T00:28:20.880+0800	ERROR	redismq/consumer.go:104	receive msg failed, err: NOGROUP No such key 'myTopic' or consumer group 'consumerGroup' in XREADGROUP with GROUP option
+2023-09-07T00:28:20.881+0800	ERROR	log/log.go:185	ListenAndServe: %!(EXTRA *net.OpError=listen tcp :9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.)
+2023-09-07T00:34:12.144+0800	INFO	file-push/main.go:33	receive msg, msg id: 1694016750379-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T00:34:12.140+0800	INFO	file-push/main.go:74	start server ...
