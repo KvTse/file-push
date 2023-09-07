@@ -6,7 +6,6 @@ import (
 	"file-push/global"
 	"file-push/log"
 	"file-push/models"
-	mq "file-push/mq"
 	"file-push/redis"
 	redmq "file-push/redis/redismq"
 	"file-push/tool"
@@ -64,7 +63,7 @@ func NewDemoDeadLetterMailbox(do func(msg *redis.MsgEntity)) *DemoDeadLetterMail
 	}
 }
 
-// 死信队列接收消息的处理方法
+// Deliver 死信队列接收消息的处理方法
 func (d *DemoDeadLetterMailbox) Deliver(ctx context.Context, msg *redis.MsgEntity) error {
 	d.do(msg)
 	return nil
@@ -98,43 +97,4 @@ func pushFileByFtp(w http.ResponseWriter, r *http.Request) {
 	}
 	log.Infof(msgID)
 
-}
-func generateMessage() {
-	time.Sleep(10 * time.Second)
-	// get message from mq
-	message := models.FtpMessage{
-		MessageId:       "messageId3",
-		RemoteStorePath: "/test1/test2/test3",
-		LocalFilePath:   "D:\\javaTest\\tif\\H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
-		FtpUser:         "ftpuser",
-		FtpPort:         "21",
-		FtpPassword:     "123456",
-	}
-	cxt := context.Background()
-	jsonMessage, _ := json.Marshal(message)
-	fmt.Printf("%v", global.GVA_CONFIG.RedisConfig.Addr)
-	mq.SendMessage2Kafka(cxt, string(jsonMessage))
-	mq.SendMessage2Kafka(cxt, string(jsonMessage))
-	time.Sleep(10 * time.Second)
-	message1 := models.FtpMessage{
-		MessageId:       "messageId1",
-		RemoteStorePath: "/test1/test2/test3",
-		LocalFilePath:   "D:\\javaTest\\tif\\H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
-		FtpUser:         "ftpuser",
-		FtpPort:         "21",
-		FtpPassword:     "123456",
-	}
-	jsonMessage1, _ := json.Marshal(message1)
-	mq.SendMessage2Kafka(cxt, string(jsonMessage1))
-	time.Sleep(10 * time.Second)
-	message2 := models.FtpMessage{
-		MessageId:       "messageId2",
-		RemoteStorePath: "/test1/test2/test3",
-		LocalFilePath:   "D:\\javaTest\\tif\\H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-2.tiff",
-		FtpUser:         "ftpuser",
-		FtpPort:         "21",
-		FtpPassword:     "123456",
-	}
-	jsonMessage2, _ := json.Marshal(message2)
-	mq.SendMessage2Kafka(cxt, string(jsonMessage2))
 }

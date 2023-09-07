@@ -3,7 +3,6 @@ package redmq
 import (
 	"context"
 	"errors"
-
 	"file-push/log"
 	"file-push/redis"
 )
