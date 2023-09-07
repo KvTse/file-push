@@ -1,3 +1,40 @@
 2023-09-07T07:23:12.690+0800	INFO	file-push/main.go:73	start server ...
 2023-09-07T07:23:43.737+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694042623737-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
 2023-09-07T07:23:43.737+0800	INFO	file-push/main.go:98	1694042623737-0
+2023-09-07T22:50:39.389+0800	INFO	file-push/main.go:73	start server ...
+2023-09-07T22:51:08.001+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098268001-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:08.001+0800	INFO	file-push/main.go:98	1694098268001-0
+2023-09-07T22:51:32.289+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098292288-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:32.289+0800	INFO	file-push/main.go:98	1694098292288-0
+2023-09-07T22:51:32.451+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098292451-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:32.451+0800	INFO	file-push/main.go:98	1694098292451-0
+2023-09-07T22:51:32.625+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098292625-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:32.625+0800	INFO	file-push/main.go:98	1694098292625-0
+2023-09-07T22:51:32.789+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098292789-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:32.789+0800	INFO	file-push/main.go:98	1694098292789-0
+2023-09-07T22:51:32.954+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098292953-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:32.954+0800	INFO	file-push/main.go:98	1694098292953-0
+2023-09-07T22:51:33.102+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098293102-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:33.102+0800	INFO	file-push/main.go:98	1694098293102-0
+2023-09-07T22:51:33.258+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098293258-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:33.258+0800	INFO	file-push/main.go:98	1694098293258-0
+2023-09-07T22:51:33.411+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098293411-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:33.411+0800	INFO	file-push/main.go:98	1694098293411-0
+2023-09-07T22:51:33.562+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098293562-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:33.562+0800	INFO	file-push/main.go:98	1694098293562-0
+2023-09-07T22:51:33.713+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098293713-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:33.713+0800	INFO	file-push/main.go:98	1694098293713-0
+2023-09-07T22:51:33.879+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098293879-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:33.879+0800	INFO	file-push/main.go:98	1694098293879-0
+2023-09-07T22:51:34.028+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098294027-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:34.028+0800	INFO	file-push/main.go:98	1694098294027-0
+2023-09-07T22:51:34.197+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098294197-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:34.197+0800	INFO	file-push/main.go:98	1694098294197-0
+2023-09-07T22:51:34.360+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098294360-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:34.360+0800	INFO	file-push/main.go:98	1694098294360-0
+2023-09-07T22:51:34.541+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098294541-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:34.542+0800	INFO	file-push/main.go:98	1694098294541-0
+2023-09-07T22:51:34.713+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098294712-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:34.713+0800	INFO	file-push/main.go:98	1694098294712-0
+2023-09-07T22:51:34.877+0800	INFO	file-push/main.go:32	receive msg, msg id: 1694098294877-0, msg key: test_kk, msg val: {"id":111,"type":1,"reportUserId":11,"reportContent":"2","targetId":33,"voteResult":2}
+2023-09-07T22:51:34.877+0800	INFO	file-push/main.go:98	1694098294877-0

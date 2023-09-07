@@ -13,7 +13,8 @@ const (
 	// 默认的分布式锁过期时间
 	DefaultLockExpireSeconds = 30
 	// 看门狗工作时间间隙
-	WatchDogWorkStepSeconds = 10
+	WatchDogWorkStepSeconds  = 10
+	DefaultSingleLockTimeout = 50 * time.Millisecond
 )
 
 type ClientOptions struct {
