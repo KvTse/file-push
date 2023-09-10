@@ -8,7 +8,7 @@ import (
 const (
 	network  = "tcp"
 	address  = "127.0.0.1:6379"
-	password = ""
+	password = "123456"
 )
 
 func Test_redis_xadd(t *testing.T) {

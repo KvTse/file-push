@@ -26,7 +26,8 @@ func main() {
 	runServer()
 }
 func startConsumer() {
-	client := redis.NewClient("tcp", "127.0.0.1:6379", "")
+	client := redis.NewClient("tcp",
+		global.GVA_CONFIG.RedisConfig.Addr, global.GVA_CONFIG.RedisConfig.Password)
 	// 接收到消息后的处理函数
 	callbackFunc := func(ctx context.Context, msg *redis.MsgEntity) error {
 		log.Infof("receive msg, msg id: %s, msg key: %s, msg val: %s", msg.MsgID, msg.Key, msg.Val)
@@ -86,7 +87,8 @@ func pushFileByFtp(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	client := redis.NewClient("tcp", "127.0.0.1:6379", "")
+	client := redis.NewClient("tcp",
+		global.GVA_CONFIG.RedisConfig.Addr, global.GVA_CONFIG.RedisConfig.Password)
 	// 最多保留十条消息
 	producer := redmq.NewProducer(client, redmq.WithMsgQueueLen(10))
 	ctx := context.Background()
