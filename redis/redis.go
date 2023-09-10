@@ -25,6 +25,12 @@ type Client struct {
 	pool *redis.Pool
 }
 
+// LockClient 分布式锁客户端
+type LockClient interface {
+	SetNEX(ctx context.Context, key, value string, expireSeconds int64) (int64, error)
+	Eval(ctx context.Context, src string, keyCount int, keysAndArgs []interface{}) (interface{}, error)
+}
+
 func NewClient(network, address, password string, opts ...ClientOption) *Client {
 	c := Client{
 		opts: &ClientOptions{

@@ -2,7 +2,7 @@ package ftpClient
 
 import (
 	"bytes"
-	"file-push/models"
+	"file-push/netcall"
 	"fmt"
 	"github.com/jlaffaye/ftp"
 	"io"
@@ -14,7 +14,7 @@ import (
 )
 
 // NewFtpConn 连接ftp并登录
-func NewFtpConn(ftpMessage models.FtpMessage) (*ftp.ServerConn, error) {
+func NewFtpConn(ftpMessage netcall.FtpMessage) (*ftp.ServerConn, error) {
 	c, err := ftp.Dial(fmt.Sprintf("%s:%s", ftpMessage.FtpHost, ftpMessage.FtpPort),
 		ftp.DialWithTimeout(5*time.Second)) // , ftp.DialWithDebugOutput(os.Stdout)
 	if err != nil {

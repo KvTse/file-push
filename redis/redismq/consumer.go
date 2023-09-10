@@ -96,30 +96,31 @@ func (c *Consumer) run() {
 			return
 		default:
 		}
-
-		// 新消息接收处理
 		msgs, err := c.receive()
 		if err != nil {
 			log.ErrorContextf(c.ctx, "receive msg failed, err: %v", err)
 			continue
 		}
+		// 异步处理消息
+		go func() {
+			// 新消息接收处理
+			tctx, _ := context.WithTimeout(c.ctx, c.opts.handleMsgsTimeout)
+			c.handlerMsgs(tctx, msgs)
 
-		tctx, _ := context.WithTimeout(c.ctx, c.opts.handleMsgsTimeout)
-		c.handlerMsgs(tctx, msgs)
-
-		// 死信队列投递
-		tctx, _ = context.WithTimeout(c.ctx, c.opts.deadLetterDeliverTimeout)
-		c.deliverDeadLetter(tctx)
+			// 死信队列投递
+			tctx, _ = context.WithTimeout(c.ctx, c.opts.deadLetterDeliverTimeout)
+			c.deliverDeadLetter(tctx)
+		}()
 
 		// pending 消息接收处理
-		pendingMsgs, err := c.receivePending()
-		if err != nil {
-			log.ErrorContextf(c.ctx, "pending msg received failed, err: %v", err)
-			continue
-		}
-
-		tctx, _ = context.WithTimeout(c.ctx, c.opts.handleMsgsTimeout)
-		c.handlerMsgs(tctx, pendingMsgs)
+		//pendingMsgs, err := c.receivePending()
+		//if err != nil {
+		//	log.ErrorContextf(c.ctx, "pending msg received failed, err: %v", err)
+		//	continue
+		//}
+		//
+		//tctx, _ = context.WithTimeout(c.ctx, c.opts.handleMsgsTimeout)
+		//c.handlerMsgs(tctx, pendingMsgs)
 	}
 }
 
@@ -153,6 +154,8 @@ func (c *Consumer) handlerMsgs(ctx context.Context, msgs []*redis.MsgEntity) {
 		if err := c.client.XACK(ctx, c.topic, c.groupID, msg.MsgID); err != nil {
 			log.ErrorContextf(ctx, "msg ack failed, msg id: %s, err: %v", msg.MsgID, err)
 			continue
+		} else {
+			log.Infof("ack success.")
 		}
 
 		delete(c.failureCnts, *msg)

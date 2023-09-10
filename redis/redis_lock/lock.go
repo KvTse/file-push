@@ -3,6 +3,7 @@ package redis_lock
 import (
 	"context"
 	"errors"
+	myRedis "file-push/redis"
 	"fmt"
 	"sync/atomic"
 	"time"
@@ -26,7 +27,7 @@ type RedisLock struct {
 	LockOptions
 	key    string
 	token  string
-	client LockClient
+	client myRedis.LockClient
 
 	// 看门狗运作标识
 	runningDog int32
@@ -34,7 +35,7 @@ type RedisLock struct {
 	stopDog context.CancelFunc
 }
 
-func NewRedisLock(key string, client LockClient, opts ...LockOption) *RedisLock {
+func NewRedisLock(key string, client myRedis.LockClient, opts ...LockOption) *RedisLock {
 	r := RedisLock{
 		key:    key,
 		token:  utils.GetProcessAndGoroutineIDStr(),

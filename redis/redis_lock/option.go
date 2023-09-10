@@ -96,6 +96,7 @@ func repairLock(o *LockOptions) {
 
 	// 倘若未设置分布式锁的过期时间，则会启动 watchdog
 	if o.expireSeconds > 0 {
+		o.watchDogMode = true
 		return
 	}
 

@@ -3,10 +3,13 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"errors"
+	ftpClient "file-push/ftp"
 	"file-push/global"
 	"file-push/log"
-	"file-push/models"
+	"file-push/netcall"
 	"file-push/redis"
+	"file-push/redis/redis_lock"
 	redmq "file-push/redis/redismq"
 	"file-push/tool"
 	"fmt"
@@ -31,7 +34,32 @@ func startConsumer() {
 	// 接收到消息后的处理函数
 	callbackFunc := func(ctx context.Context, msg *redis.MsgEntity) error {
 		log.Infof("receive msg, msg id: %s, msg key: %s, msg val: %s", msg.MsgID, msg.Key, msg.Val)
-		return nil
+
+		ftpMessage := netcall.FtpMessage{}
+		if err := json.Unmarshal([]byte(msg.Val), &ftpMessage); err != nil {
+			log.Errorf("message is not a json string %s", msg.Val)
+			// 消息算是处理成功了, 是格式不对,在接口侧校验,理论上不应该走到这里来
+			return nil
+		}
+		lockCxt := context.Background()
+		client := redis.NewClient("tcp",
+			global.GVA_CONFIG.RedisConfig.Addr, global.GVA_CONFIG.RedisConfig.Password)
+		lock := redis_lock.NewRedisLock(ftpMessage.MessageId, client, redis_lock.WithExpireSeconds(30))
+		// 加锁成功,正在处理任务
+		if err := lock.Lock(lockCxt); err == nil {
+			business := ftpClient.DoConsumeFtpPushBusiness(ftpMessage)
+			if business {
+				log.Infof("message %s handle success ", msg.Val)
+				return nil
+			}
+			// 处理完成释放锁
+			defer lock.Unlock(lockCxt)
+		} else {
+			// 回调 正在处理,请勿重复提交
+			vo := netcall.FailedWithMsg(ftpMessage.MessageId, "重复任务...")
+			netcall.FtpReqCallbackIfNecessary(vo, ftpMessage.CallbackUrl)
+		}
+		return errors.New("DoConsumeFtpPushBusiness wrong")
 	}
 
 	// 自定义实现的死信队列
@@ -80,10 +108,12 @@ func runServer() {
 }
 func pushFileByFtp(w http.ResponseWriter, r *http.Request) {
 	ftpParams, _ := io.ReadAll(r.Body)
-	ftpMessage := models.FtpMessage{}
+	ftpMessage := netcall.FtpMessage{}
 	if err := json.Unmarshal(ftpParams, &ftpMessage); err != nil {
 		log.Errorf("message is not a json string %s", string(ftpParams))
-		fmt.Fprintf(w, "message is not a json string")
+		vo := netcall.ResponseVo{MessageId: ftpMessage.MessageId, Code: 1, IsSuccess: false, Msg: "request param is not a json string"}
+		responseJson, _ := json.Marshal(vo)
+		fmt.Fprintf(w, string(responseJson))
 		return
 	}
 
@@ -94,9 +124,15 @@ func pushFileByFtp(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
 	msgID, err := producer.SendMsg(ctx, "myTopic", "test_kk", string(ftpParams))
 	if err != nil {
+		vo := netcall.ResponseVo{MessageId: ftpMessage.MessageId, Code: 500, IsSuccess: false, Msg: "server error please contact the person in charge."}
+		responseJson, _ := json.Marshal(vo)
+		fmt.Fprintf(w, string(responseJson))
 		log.Errorf("send to redis error ", err)
 		return
 	}
 	log.Infof(msgID)
 
+	responseVo := netcall.Success(ftpMessage.MessageId)
+	marshal, _ := json.Marshal(responseVo)
+	fmt.Fprintf(w, string(marshal))
 }

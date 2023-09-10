@@ -36,3 +36,612 @@
 		"FtpPort":         "21",
 		"FtpPassword":     "123456"
 	}
+2023-09-10T10:31:29.003+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T10:31:54.405+0800	INFO	file-push/main.go:107	1694313114405-0
+2023-09-10T10:31:54.406+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694313114405-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:33:16.710+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T10:33:18.791+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694313114405-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:33:35.320+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	} handle success 
+2023-09-10T10:35:29.364+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694313329364-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:35:29.364+0800	INFO	file-push/main.go:107	1694313329364-0
+2023-09-10T10:35:45.768+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	} handle success 
+2023-09-10T10:39:09.600+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T10:41:06.355+0800	INFO	file-push/main.go:107	1694313666354-0
+2023-09-10T10:41:06.355+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694313666354-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId4",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:42:10.233+0800	INFO	file-push/main.go:107	1694313730231-0
+2023-09-10T10:42:35.511+0800	INFO	file-push/main.go:107	1694313755511-0
+2023-09-10T10:45:37.254+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId4",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	} handle success 
+2023-09-10T10:45:37.304+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694313730231-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId5",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tar.gz",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:46:21.105+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId5",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tar.gz",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	} handle success 
+2023-09-10T10:46:21.122+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694313755511-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:46:37.425+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	} handle success 
+2023-09-10T11:34:17.086+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T11:34:43.313+0800	INFO	file-push/main.go:112	1694316883312-0
+2023-09-10T11:34:43.313+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694316883312-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T11:34:59.591+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	} handle success 
+2023-09-10T14:24:30.288+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T14:30:12.002+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T14:45:04.303+0800	INFO	file-push/main.go:112	1694328304292-0
+2023-09-10T14:45:04.320+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694328304292-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http:localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:45:21.055+0800	INFO	netcall/netcall.go:32	do quest url http:localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:45:21.057+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http:localhost:8080/asean/callback/ftpMessageBack"
+	} handle success 
+2023-09-10T14:50:06.181+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694328606181-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http:localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:50:06.181+0800	INFO	file-push/main.go:112	1694328606181-0
+2023-09-10T14:50:47.618+0800	INFO	netcall/netcall.go:32	do quest url http:localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:52:07.115+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T14:52:09.142+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694328606181-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http:localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:53:18.523+0800	INFO	netcall/netcall.go:32	do quest url http:localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:53:22.757+0800	ERROR	netcall/netcall.go:35	response error Post "http:localhost:8080/asean/callback/ftpMessageBack": http: no Host in request URL
+2023-09-10T14:53:26.748+0800	INFO	file-push/main.go:38	message {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http:localhost:8080/asean/callback/ftpMessageBack"
+	} handle success 
+2023-09-10T14:53:41.880+0800	INFO	file-push/main.go:112	1694328821879-0
+2023-09-10T14:53:41.880+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694328821879-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:53:58.213+0800	INFO	netcall/netcall.go:32	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:53:58.967+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694328821879-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:54:15.246+0800	INFO	netcall/netcall.go:32	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:54:17.352+0800	INFO	file-push/main.go:46	receive dead letter, msg id: 1694328821879-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:55:31.489+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694328931488-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:55:31.489+0800	INFO	file-push/main.go:112	1694328931488-0
+2023-09-10T14:55:47.773+0800	INFO	netcall/netcall.go:32	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:55:48.041+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694328931488-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:56:04.321+0800	INFO	netcall/netcall.go:32	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:56:06.417+0800	INFO	file-push/main.go:46	receive dead letter, msg id: 1694328931488-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:58:44.839+0800	INFO	file-push/main.go:112	1694329124838-0
+2023-09-10T14:58:44.840+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694329124838-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:59:01.152+0800	INFO	netcall/netcall.go:32	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:59:01.416+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694329124838-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T14:59:17.651+0800	INFO	netcall/netcall.go:32	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T14:59:19.721+0800	INFO	file-push/main.go:46	receive dead letter, msg id: 1694329124838-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:02:31.577+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T15:02:39.845+0800	INFO	file-push/main.go:112	1694329359844-0
+2023-09-10T15:02:39.845+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694329359844-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:02:56.066+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T15:03:02.440+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694329359844-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:03:18.693+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T15:22:07.145+0800	INFO	file-push/main.go:46	receive dead letter, msg id: 1694329359844-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:25:02.516+0800	INFO	file-push/main.go:112	1694330702515-0
+2023-09-10T15:25:02.516+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694330702515-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:25:18.893+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T15:25:25.005+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694330702515-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:25:41.309+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T15:25:45.565+0800	INFO	file-push/main.go:46	receive dead letter, msg id: 1694330702515-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:28:28.569+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T15:28:35.382+0800	INFO	file-push/main.go:112	1694330915381-0
+2023-09-10T15:28:35.382+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694330915381-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:28:51.675+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T15:29:01.832+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694330915381-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:29:18.204+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T15:29:27.918+0800	INFO	file-push/main.go:46	receive dead letter, msg id: 1694330915381-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:34:11.507+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T15:34:47.920+0800	INFO	file-push/main.go:112	1694331287920-0
+2023-09-10T15:34:47.921+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694331287920-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:35:04.140+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T15:36:18.399+0800	INFO	file-push/main.go:112	1694331378399-0
+2023-09-10T15:36:18.400+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694331378399-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:36:34.736+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T15:39:37.282+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694331577281-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:39:37.282+0800	INFO	file-push/main.go:112	1694331577281-0
+2023-09-10T15:40:23.869+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId6","code":1,"isSuccess":false,"msg":"file has already existed"}
+2023-09-10T15:44:16.148+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T15:44:41.183+0800	INFO	file-push/main.go:112	1694331881183-0
+2023-09-10T15:44:41.183+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694331881183-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId6",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:44:45.209+0800	INFO	ftp/ftpService.go:11	start to connect ftp ...
+2023-09-10T15:45:01.476+0800	INFO	ftp/ftpService.go:13	start to change to work dir ...
+2023-09-10T15:45:44.165+0800	INFO	file-push/main.go:112	1694331944165-0
+2023-09-10T15:45:44.165+0800	INFO	file-push/main.go:35	receive msg, msg id: 1694331944165-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777777",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T15:45:44.167+0800	INFO	ftp/ftpService.go:11	start to connect ftp ...
+2023-09-10T15:46:00.415+0800	INFO	ftp/ftpService.go:13	start to change to work dir ...
+2023-09-10T15:48:19.194+0800	INFO	file-push/main.go:81	start server ...
+2023-09-10T16:41:00.597+0800	INFO	file-push/main.go:101	start server ...
+2023-09-10T16:41:28.847+0800	INFO	file-push/main.go:132	1694335288846-0
+2023-09-10T16:41:28.847+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335288846-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777777",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:43:31.155+0800	INFO	file-push/main.go:132	1694335411156-0
+2023-09-10T16:43:31.155+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335411156-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777777",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:45:29.451+0800	INFO	file-push/main.go:102	start server ...
+2023-09-10T16:45:43.447+0800	INFO	file-push/main.go:133	1694335543446-0
+2023-09-10T16:45:43.447+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335543446-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777777",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:45:50.883+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T16:46:07.153+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T16:46:33.315+0800	INFO	file-push/main.go:133	1694335593284-0
+2023-09-10T16:46:33.315+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335593284-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777777",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:46:33.346+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T16:46:49.635+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T16:47:09.205+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335629204-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777777",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:47:09.205+0800	INFO	file-push/main.go:133	1694335629204-0
+2023-09-10T16:47:09.211+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T16:47:25.422+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T16:47:34.356+0800	INFO	file-push/main.go:133	1694335654355-0
+2023-09-10T16:47:34.357+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335654355-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777777",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10-1.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:47:44.920+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777777","code":1,"isSuccess":false,"msg":"重复任务..."}
+2023-09-10T16:50:00.048+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335800047-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:50:00.048+0800	INFO	file-push/main.go:133	1694335800047-0
+2023-09-10T16:50:04.377+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T16:50:20.634+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T16:52:19.291+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694335939289-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:52:19.294+0800	INFO	file-push/main.go:133	1694335939289-0
+2023-09-10T16:52:29.157+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T16:52:45.388+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T16:53:06.642+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777777","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T16:53:08.010+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777777","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T16:53:08.234+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777777","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T16:53:58.045+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777778","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T16:53:58.062+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777778","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T16:56:03.993+0800	INFO	file-push/main.go:102	start server ...
+2023-09-10T16:56:18.389+0800	INFO	file-push/main.go:133	1694336178388-0
+2023-09-10T16:56:18.391+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694336178388-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:56:18.393+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T16:56:34.669+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T16:58:29.517+0800	INFO	file-push/main.go:133	1694336309516-0
+2023-09-10T16:58:29.517+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694336309516-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T16:58:53.423+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T16:59:27.871+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T17:02:13.496+0800	INFO	file-push/main.go:102	start server ...
+2023-09-10T17:04:04.345+0800	INFO	file-push/main.go:133	1694336644345-0
+2023-09-10T17:04:04.345+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694336644345-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T17:04:22.386+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T17:04:38.582+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T17:04:57.823+0800	INFO	file-push/main.go:102	start server ...
+2023-09-10T17:05:18.496+0800	INFO	file-push/main.go:133	1694336718495-0
+2023-09-10T17:05:18.496+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694336718495-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T17:05:18.501+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T17:05:37.771+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T17:06:39.340+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777778","code":0,"isSuccess":true,"msg":"success"}
+2023-09-10T17:07:00.897+0800	INFO	file-push/main.go:133	1694336820903-0
+2023-09-10T17:07:00.897+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694336820903-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T17:07:00.900+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T17:10:01.458+0800	INFO	file-push/main.go:103	start server ...
+2023-09-10T17:10:06.748+0800	INFO	file-push/main.go:134	1694337006748-0
+2023-09-10T17:10:06.748+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694337006748-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T17:10:06.753+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T17:10:22.977+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T17:11:53.450+0800	INFO	file-push/main.go:102	start server ...
+2023-09-10T17:12:04.079+0800	INFO	file-push/main.go:133	1694337124078-0
+2023-09-10T17:12:04.079+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694337124078-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T17:12:04.084+0800	INFO	ftp/ftpService.go:10	start to connect ftp ...
+2023-09-10T17:12:20.322+0800	INFO	ftp/ftpService.go:12	start to change to work dir ...
+2023-09-10T17:13:09.223+0800	INFO	file-push/main.go:36	receive msg, msg id: 1694337189222-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId7777778",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10.tiff",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456",
+		"callbackUrl": "http://localhost:8080/asean/callback/ftpMessageBack"
+	}
+2023-09-10T17:13:09.223+0800	INFO	file-push/main.go:133	1694337189222-0
+2023-09-10T17:13:12.914+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777778","code":1,"isSuccess":false,"msg":"重复任务..."}
+2023-09-10T17:16:40.374+0800	INFO	netcall/netcall.go:28	do quest url http://localhost:8080/asean/callback/ftpMessageBack,params {"messageId":"messageId7777778","code":0,"isSuccess":true,"msg":"success"}
