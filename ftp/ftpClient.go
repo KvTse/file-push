@@ -2,11 +2,11 @@ package ftpClient
 
 import (
 	"bytes"
+	"file-push/log"
 	"file-push/netcall"
 	"fmt"
 	"github.com/jlaffaye/ftp"
 	"io"
-	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -18,11 +18,11 @@ func NewFtpConn(ftpMessage netcall.FtpMessage) (*ftp.ServerConn, error) {
 	c, err := ftp.Dial(fmt.Sprintf("%s:%s", ftpMessage.FtpHost, ftpMessage.FtpPort),
 		ftp.DialWithTimeout(5*time.Second)) // , ftp.DialWithDebugOutput(os.Stdout)
 	if err != nil {
-		log.Fatalf("dial ftp %s err %v", ftpMessage.FtpUser, err)
+		log.Errorf("dial ftp %s err %v", ftpMessage.FtpUser, err)
 	}
 	err = c.Login(ftpMessage.FtpUser, ftpMessage.FtpPassword)
 	if err != nil {
-		log.Fatal(err)
+		log.Errorf("login ftp error %v", err)
 	}
 	return c, err
 }
@@ -60,7 +60,7 @@ func ChangeDirAndMakeDirIfNotExist(conn *ftp.ServerConn, workDir string, baseDir
 func UploadFile(conn *ftp.ServerConn, locateFilePath string) (uploadResult string, err error) {
 	file, err := os.Open(locateFilePath)
 	if err != nil {
-		log.Printf("open file error %v", err)
+		log.Errorf("open file error %v", err)
 		return "文件不存在", err
 	}
 	fileName := filepath.Base(file.Name())
@@ -69,7 +69,7 @@ func UploadFile(conn *ftp.ServerConn, locateFilePath string) (uploadResult strin
 	// 远程目录下已经存在文件
 	fileExists := FtpFileExists(conn, fileName)
 	if fileExists {
-		log.Printf("file has already existed.")
+		log.Errorf("file has already existed.")
 		// TODO 文件存在怎么处理? 重传覆盖还是略过
 		return "file has already existed", nil
 	}
@@ -94,29 +94,35 @@ func UploadFile(conn *ftp.ServerConn, locateFilePath string) (uploadResult strin
 			}
 			err := conn.Rename(uploadingFile, fileName)
 			if err != nil {
-				log.Printf("rename file err %v", err)
+				log.Errorf("rename file err %v", err)
 			}
-			log.Printf("file upload completed...%s size %d", fileName, total)
+			log.Infof("file upload completed...%s size %d", fileName, total)
 			break
 		} else if err != nil {
-			log.Printf("read local file error %v", err)
+			log.Errorf("read local file error %v", err)
 			break
 		}
 		total += n
+		tryTimes := 0
 		for {
 			err = conn.StorFrom(uploadingFile, bytes.NewReader(data), uint64(remoteSize))
 			if err == nil {
+				tryTimes = 0
 				break
 			} else {
+				if tryTimes >= 3 {
+					break
+				}
+				tryTimes++
 				time.Sleep(500 * time.Millisecond)
-				log.Print(err)
+				log.Errorf("pushing occur error v%", err)
 			}
 		}
 		//time.Sleep(10 * time.Second)
 		remoteSize += int64(n)
-		log.Printf("file [%s] uploaded %d  total size %d process %s", uploadingFile, remoteSize, fileSize, fmt.Sprintf("%.2f", float64(remoteSize)/float64(fileSize)))
+		log.Infof("file [%s] uploaded %d  total size %d process %s", uploadingFile, remoteSize, fileSize, fmt.Sprintf("%.2f", float64(remoteSize)/float64(fileSize)))
 		if err != nil {
-			log.Fatalf("cannot Store file, fileName %s , err %v", file.Name(), err)
+			log.Errorf("cannot Store file, fileName %s , err %v", file.Name(), err)
 		}
 	}
 	return "", nil
@@ -136,6 +142,6 @@ func FtpFileExists(conn *ftp.ServerConn, fileName string) bool {
 // Quit quit ftp conn
 func Quit(conn *ftp.ServerConn) {
 	if err := conn.Quit(); err != nil {
-		log.Fatal(err)
+		log.Errorf("can not quit ftp ", err)
 	}
 }
