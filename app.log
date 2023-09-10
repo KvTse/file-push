@@ -1,0 +1,38 @@
+2023-09-10T10:14:28.057+0800	INFO	file-push/main.go:74	start server ...
+2023-09-10T10:15:31.033+0800	INFO	file-push/main.go:100	1694312131033-0
+2023-09-10T10:15:31.037+0800	INFO	file-push/main.go:33	receive msg, msg id: 1694312131033-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:20:00.341+0800	INFO	file-push/main.go:100	1694312400341-0
+2023-09-10T10:20:14.525+0800	INFO	file-push/main.go:33	receive msg, msg id: 1694312400341-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:14:28.057+0800	INFO	file-push/main.go:74	start server ...
+2023-09-10T10:15:31.033+0800	INFO	file-push/main.go:100	1694312131033-0
+2023-09-10T10:15:31.037+0800	INFO	file-push/main.go:33	receive msg, msg id: 1694312131033-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
+2023-09-10T10:20:00.341+0800	INFO	file-push/main.go:100	1694312400341-0
+2023-09-10T10:20:14.525+0800	INFO	file-push/main.go:33	receive msg, msg id: 1694312400341-0, msg key: test_kk, msg val: {
+		"MessageId":       "messageId3",
+		"RemoteStorePath": "/test1/test2/test3",
+		"LocalFilePath":   "D:/javaTest/tif/H1D_OPER_CZI_L1C_20221115T095502_20221115T095557_12729_10_thumb.jpg",
+		"FtpUser":         "ftpuser",
+		"FtpPort":         "21",
+		"FtpPassword":     "123456"
+	}
