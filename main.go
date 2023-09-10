@@ -58,6 +58,7 @@ func startConsumer() {
 			// 回调 正在处理,请勿重复提交
 			vo := netcall.FailedWithMsg(ftpMessage.MessageId, "重复任务...")
 			netcall.FtpReqCallbackIfNecessary(vo, ftpMessage.CallbackUrl)
+			return errors.New("repeat wrong")
 		}
 		return errors.New("DoConsumeFtpPushBusiness wrong")
 	}

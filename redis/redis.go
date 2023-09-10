@@ -3,6 +3,7 @@ package redis
 import (
 	"context"
 	"errors"
+	"file-push/log"
 	"fmt"
 	"strings"
 	"time"
@@ -179,11 +180,14 @@ func (c *Client) xReadGroup(ctx context.Context, groupID, consumerID, topic stri
 		}
 		msgID := gocast.ToString(_msg[0])
 		msgBody, _ := _msg[1].([]interface{})
-		if len(msgBody) != 2 {
-			return nil, errors.New("invalid msg format")
+		msgKey := ""
+		msgVal := ""
+		if len(msgBody) == 2 {
+			msgKey = gocast.ToString(msgBody[0])
+			msgVal = gocast.ToString(msgBody[1])
+		} else {
+			log.Errorf("invalid msg format...")
 		}
-		msgKey := gocast.ToString(msgBody[0])
-		msgVal := gocast.ToString(msgBody[1])
 		msgs = append(msgs, &MsgEntity{
 			MsgID: msgID,
 			Key:   msgKey,

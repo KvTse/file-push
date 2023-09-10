@@ -96,7 +96,13 @@ func (c *Consumer) run() {
 			return
 		default:
 		}
+		// TODO 这里还是有点问题... 当receive拿完消息还未处理完时,pending直接哪消息
+		// 需要阅读下redis xtream的文档 寻找解决方案
 		msgs, err := c.receive()
+		if msgs == nil {
+			log.Infof("msgs is nil,read from pending...")
+			msgs, err = c.receivePending()
+		}
 		if err != nil {
 			log.ErrorContextf(c.ctx, "receive msg failed, err: %v", err)
 			continue
@@ -112,7 +118,7 @@ func (c *Consumer) run() {
 			c.deliverDeadLetter(tctx)
 		}()
 
-		// pending 消息接收处理
+		//// pending 消息接收处理
 		//pendingMsgs, err := c.receivePending()
 		//if err != nil {
 		//	log.ErrorContextf(c.ctx, "pending msg received failed, err: %v", err)
