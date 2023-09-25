@@ -51,3 +51,7 @@ func FailedWithMsg(messageId string, msg string) ResponseVo {
 	vo := ResponseVo{MessageId: messageId, Code: 1, IsSuccess: false, Msg: msg}
 	return vo
 }
+func FailedWithCodeMsg(messageId string, code int, msg string) ResponseVo {
+	vo := ResponseVo{MessageId: messageId, Code: code, IsSuccess: false, Msg: msg}
+	return vo
+}

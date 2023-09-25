@@ -56,7 +56,7 @@ func startConsumer() {
 			defer lock.Unlock(lockCxt)
 		} else {
 			// 回调 正在处理,请勿重复提交
-			vo := netcall.FailedWithMsg(ftpMessage.MessageId, "重复任务...")
+			vo := netcall.FailedWithCodeMsg(ftpMessage.MessageId, 10, "重复任务...")
 			netcall.FtpReqCallbackIfNecessary(vo, ftpMessage.CallbackUrl)
 			return errors.New("repeat wrong")
 		}
